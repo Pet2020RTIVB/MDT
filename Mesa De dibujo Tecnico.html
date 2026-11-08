@@ -304,7 +304,7 @@ const lab=i=>$(i).closest('label')||$(i),sep=()=>{const s=document.createElement
 const IC={pen:['✎','Lápiz'],boli:['✍︎','Boli'],lin:['╱','Línea'],comp:['☉','Compás'],med:['↔','Medir'],mov:['⇥','Trasladar'],con:['✱','Construir'],pto:['•','Punto'],ang:['∠','Ángulo'],sel:['⬚','Selec.'],bg:['🀫','Lámina'],bor:['⌫','Goma'],mano:['📏','Reglas']};
 document.querySelectorAll('#tools [data-k]').forEach(b=>{const[i,l]=IC[b.dataset.k];b.innerHTML='<span>'+i+'</span><small>'+l+'</small>';b.title=l;$('rail').append(b)});
 const tt=(id,t,h)=>{$(id).textContent=t;$(id).title=h};
-tt('add','+','Añadir folio');tt('del','✕','Borrar folio');tt('und','☜','Deshacer');tt('red','☞','Rehacer');tt('sav','⤓','Descargar JSON');tt('lod','⭱⤒','Subir JSON');tt('zf','⤢','Ajustar a la pantalla');
+tt('add','+','Añadir folio');tt('del','✕','Borrar folio');tt('und','☜','Deshacer');tt('red','☞','Rehacer');tt('sav','⤓','Descargar JSON');tt('lod','⤒','Subir JSON');tt('zf','⤢','Ajustar a la pantalla');
 $('top').append(sep(),$('prev'),$('pg'),$('next'),$('add'),$('del'),sep(),$('und'),$('red'),sep(),$('zo'),$('zl'),$('zi'),$('zf'),sep(),$('sav'),$('lod'),sep(),lab('gr'),lab('fd'));
 $('top').insertAdjacentHTML('beforeend',`<button id="fs" title="Ocultar menús">⛶</button>`);
 function grp(id,...els){const s=document.createElement('span');s.id=id;s.append(...els);$('opt').append(s)}
